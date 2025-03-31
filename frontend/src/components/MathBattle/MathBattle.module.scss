@@ -1,0 +1,106 @@
+.container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  position: relative;
+  color: #333;
+  height: 60vh;
+}
+
+.health {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.question {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.input {
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #218838;
+}
+
+.button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.message {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.gameOverScreen {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.948);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.gameOver {
+  font-size: 48px;
+  color: red;
+}
+
+.backButton {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.backButton > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.backButton:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.backButton:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+}

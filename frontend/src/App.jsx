@@ -9,7 +9,7 @@ import ProductPage from './pages/ProductPage';
 
 const Home = lazy(() => import('./pages/Home'));
 const Bought = lazy(() => import('./pages/Bought'));
-const Magaz = lazy(() => import('./pages/magaz')); // Убедись, что файл с заглавной буквы
+const Magaz = lazy(() => import('./pages/magaz'));
 const NotFoundPage = lazy(() => import('./components/NotFoundPage/NotFoundPage'));
 const NewsHero = lazy(() => import('./components/NewsHero/NewsHero'));
 const Society = lazy(() => import('./components/Society/Society'));
@@ -26,6 +26,8 @@ const Games = lazy(() => import('./components/Games/Games'));
 const Tir = lazy(() => import('./components/Tir/Tir'));
 const Teacher = lazy(() => import('./pages/Teacher'));
 const ChatGroup = lazy(() => import('./components/ChatGroup/ChatGroup'));
+const KnowledgeMaze = lazy(() => import('./components/KnowledgeMaze/KnowledgeMaze'));
+const MathBattle = lazy(() => import('./components/MathBattle/MathBattle'));
 
 const App = () => {
   const location = useLocation();
@@ -40,7 +42,7 @@ const App = () => {
   const isNotFoundPage = ![
     "/", "/ChatGroup", "/Teacher", "/Register", "/Login", "/MainPage",
     "/Society", "/Tech", "/Culture", "/TicTacToe", "/Snake", "/flappybird",
-    "/Games", "/Tetris", "/Tir", "/Shop", "/news", "/bought"
+    "/Games", "/Tetris", "/Tir", "/Shop", "/news", "/bought", "/KnowledgeMaze", "/MathBattle"
   ].includes(location.pathname);
 
   return (
@@ -67,6 +69,8 @@ const App = () => {
           <Route path="/Shop" element={<Magaz />} />
           <Route path="/Teacher" element={<Teacher />} />
           <Route path="/ChatGroup" element={<ChatGroup />} />
+          <Route path="/KnowledgeMaze" element={<KnowledgeMaze/>}/>
+          <Route path="/MathBattle" element={<MathBattle/>}/>
           <Route path='/bought' element={<Bought purchasedItems={purchasedItems} setPurchasedItems={setPurchasedItems} />} />
           <Route path='/product/:id' element={<ProductPage/>}/>
         </Routes>
